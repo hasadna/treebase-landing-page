@@ -1,0 +1,62 @@
+@import '../../common.less';
+
+:host {
+    background-color: @color-green-500;
+    .desktop({
+        padding: 80px 120px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+    });
+    .mobile({
+        padding: 32px 16px;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 32px;
+    });
+
+    span, a {
+        text-align: justify;
+        .font-noto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: @color-white;
+    }
+
+    .pkw-logo {
+        width: 244px;
+        height: 35px;
+        .background-image;
+        background-image: url(../../assets/img/logo-hasadna-footer.svg);
+    }
+
+    .right {
+        .desktop({
+            flex: 0 0 50%;
+        });
+        display: flex;
+        flex-flow: column;
+        gap: 16px;
+    }
+
+    .left {
+        .desktop({
+            margin-right: auto;
+            flex: 0 1 auto;                
+        });
+        display: flex;
+        flex-flow: column;
+        gap: 80px;
+        // align-items: flex-end;
+
+        span {
+            display: inline;
+            width: auto;
+        }
+    }
+}

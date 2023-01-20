@@ -1,0 +1,128 @@
+.font-noto {
+    font-family: 'Noto Sans Hebrew', sans-serif;
+}
+
+.font-suez {
+    font-family: 'Suez One', serif;
+}
+
+@color-bg: #e5e5e5;
+@color-text: #383838;
+@color-white: #ffffff;
+
+@color-green-50: #EAF5E9;
+@color-green-100: #8BA698;
+@color-green-500: #204E37;
+@color-green-400: #1AA23E;
+@color-green-400-2: #64B883;
+
+@color-grey-100: #DBE8DC;
+@color-grey-200: #D1CFCF;
+
+* {
+    .font-noto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 142%;    
+}
+
+h1 {
+    .font-suez;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 118%;
+}
+
+h2 {
+    .font-noto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h4 {
+    .font-noto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 132%;
+}
+
+h5 {
+    .font-noto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 142%;
+}
+
+h6 {
+    .font-suez;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 67px;
+    line-height: 118%;
+}
+
+
+// Utils
+.background-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.button-image {
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.no-scrollbars {
+    /*FireFox*/
+    scrollbar-width: none;
+    /*IE10+*/
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    &::-webkit-scrollbar {
+    /*Chrome, Safari, Edge*/
+        display: none;
+    }
+}
+
+@mobile-threshold: 900px;
+
+.mobile(@rules) {
+    @media only screen and (max-width: (@mobile-threshold - 1px)) {
+        @rules();
+    }
+}
+
+.desktop(@rules) {
+    @media only screen and (min-width: @mobile-threshold) {
+        @rules();
+    }
+}
+
+.mobile({
+    ::ng-deep .layout-desktop {
+        display: none !important;
+    }
+});
+
+.desktop({
+    ::ng-deep .layout-mobile {
+        display: none !important;
+    }
+});
+
+::ng-deep .display-none {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
