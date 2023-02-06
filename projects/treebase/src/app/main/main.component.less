@@ -476,7 +476,7 @@
             }
 
             .munis {
-                background: @color-green-50;
+                // background: @color-green-50;
                 border-radius: 40px;
                 padding-top: 72px;
                 width: 100%;
@@ -490,6 +490,28 @@
                 font-size: 24px;
                 line-height: 118%;
                 color: @color-green-500;
+                text-align: center;
+
+                .muni-logos {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    align-items: center;
+                    .desktop({
+                        padding: 64px 32px;
+                        gap: 32px;
+                        img {
+                            max-height: 64px;
+                        }
+                    });
+                    .mobile({
+                        padding: 16px 0;
+                        gap: 16px;
+                        img {
+                            max-height: 48px;
+                        }
+                    });
+                }
             }
         }
     }

@@ -9,6 +9,11 @@ import { delay } from 'rxjs';
 })
 export class MainComponent {
 
-  constructor() {}
+  muniLogos: number[] = [];
 
+  constructor() {
+    for (let i = 0 ; i < 20 ; i++) {
+      this.muniLogos.push(i);
+    }
+  }
 }

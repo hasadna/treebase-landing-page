@@ -79,6 +79,9 @@
     <div class='section'>
         <div class='munis'>
             רשויות מקומיות שהצטרפו למאגר
+            <div class='muni-logos'>
+                <img *ngFor='let i of muniLogos' [src]='"assets/img/logos/" + i + ".png"' />
+            </div>
         </div>
     </div>
 </div>
