@@ -1,8 +1,16 @@
+<div class='menu-button layout-mobile' (click)='active = true'></div>
 <div class='logo'></div>
-<div class='links'>
+<div class='links layout-desktop'>
     <a href='#about'>אודות</a>
     <a href='#treeid'>המזעץ</a>
     <a href='#status'>תמונת מצב</a>
     <a href='#join-us'>הצטרפו אלינו</a>
 </div>
 <a class='pkw layout-desktop' href='https://www.hasadna.org.il/' target='_blank'></a>
+<div class='menu layout-mobile' [class.active]='active' (click)='active=false; true'>
+    <a href='#about'>אודות</a>
+    <a href='#treeid'>המזעץ</a>
+    <a href='#status'>תמונת מצב</a>
+    <a href='#join-us'>הצטרפו אלינו</a>
+    <div class='close'></div>
+</div>

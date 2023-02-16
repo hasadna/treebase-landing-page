@@ -41,6 +41,9 @@
         height: 50px;
         .background-image;
         background-image: url(../../assets/img/logo-treebase.svg);
+        .mobile({
+            margin-right: auto;
+        })
     }
 
     .pkw {
@@ -50,5 +53,51 @@
         height: 32px;
         .background-image;
         background-image: url(../../assets/img/logo-hasadna.svg);
+    }
+
+    .menu-button {
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        .background-image;
+        background-image: url(../../assets/img/icon-menu.svg);
+    }
+
+    .menu {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        transform: translateY(-120%);
+        transition: transform 0.3s ease-in-out;
+        &.active {
+            transform: translateY(0);
+        }
+        background-color: white;
+        padding: 64px;
+        display: flex;
+        flex-flow: column;
+        gap: 32px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     
+        a {
+            .font-noto;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            color: @color-green-300;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 24px;
+            height: 24px;
+            .background-image;
+            background-image: url(../../assets/img/icon-close.svg);
+        }
     }
 }
