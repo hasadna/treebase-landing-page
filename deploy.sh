@@ -3,6 +3,7 @@ git checkout main && \
 (git branch -D dist || true) && \
 git checkout -b dist && \
 rm .gitignore && \
+python indicators.py && \
 npm run prod && \
 cp dist/treebase/browser/index.html dist/treebase/browser/404.html && \
 cp CNAME dist/treebase/browser/ || true && \

@@ -59,10 +59,10 @@
             <div class='subtitle'>בימים אלה צומח בסיס הנתונים הארצי של היער העירוני, בקרוב תוכלו להתעדכן בקצב דיגיטציית העצים בערים בישראל ולקבל תמונת מצב שלמה על כמות העצים במרחבים עירוניים:</div>
             <div class='para kind4'>
                 <ul>
-                    <li>כמה ואילו שותפים העלו מאגרי מידע?</li>
-                    <li>כמה עצים וחופות מופו?</li>
-                    <li>כמה מְזַעֶצים נוצרו?</li>
-                    <li>כמה אנו רחוקים מיעד הדיגיטציה?</li>
+                    <li><span class='number'>{{indicators.tree_count.toLocaleString()}}</span> עצים (מזעץ) במאגר</li>
+                    <li>ממוצע אחוז כיסוי חופות לרשות: <span class='number'>{{indicators.avg_canopy_cover.toFixed(1)}}%</span></li>
+                    <li><span class='number'>{{(100 * indicators.count_munis_more_than_10 / indicators.count_munis).toFixed(0)}}%</span> מהרשויות עם מעל 10% כיסוי חופות</li>
+                    <li><span class='number'>{{(100 * indicators.count_contributing_munis / indicators.count_munis).toFixed(0)}}%</span> מהרשויות שיתפו סקר עצים</li>
                 </ul>
             </div>
         </div>

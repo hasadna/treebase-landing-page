@@ -12,6 +12,11 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '16'
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: python requirements
+        run: pip install requests
       - name: npm requirements
         run: npm install
       - name: git identity
