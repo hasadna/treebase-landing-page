@@ -27,7 +27,7 @@
     </div>
 </div>
 <div class='explainers'>
-    <div class='explainer right' id='status'>
+    <div class='explainer right' id='app'>
         <div class='photo kind3'></div>
         <div class='content'>
             <div class='title'>ממשק הצפיה</div>
@@ -77,7 +77,7 @@
             <div class='para kind4'>
                 <ul>
                     <li><span class='number'>{{indicators.tree_count.toLocaleString()}}</span> עצים (מזעץ) במאגר</li>
-                    <li>ממוצע אחוז כיסוי חופות לרשות: <span class='number'>{{indicators.avg_canopy_cover.toFixed(1)}}%</span></li>
+                    <li><span class='number'>{{indicators.avg_canopy_cover.toFixed(0)}}%</span> כיסוי ממוצע של חופות לרשות</li>
                     <li><span class='number'>{{(100 * indicators.count_munis_more_than_10 / indicators.count_munis).toFixed(0)}}%</span> מהרשויות עם מעל 10% כיסוי חופות</li>
                     <li><span class='number'>{{(100 * indicators.count_contributing_munis / indicators.count_munis).toFixed(0)}}%</span> מהרשויות שיתפו סקר עצים</li>
                 </ul>
