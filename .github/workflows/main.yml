@@ -3,6 +3,8 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0' # Runs at 00:00 UTC every Sunday
 
 jobs:
   build:
@@ -11,10 +13,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: '16'
+          node-version: '18'
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.11'
       - name: python requirements
         run: pip install requests
       - name: npm requirements
